@@ -28,4 +28,18 @@ void main() {
   print(age/10);
   print(age%10);
   */
+  String name = "sadanand";
+  print(name);
+  
+  int age = 23;
+  print(age);
+ 
+  bool isOpen = true;
+  print(isOpen);
+  
+  double averageRating = 5.5;
+  print(averageRating);
+
+
+  
 }
