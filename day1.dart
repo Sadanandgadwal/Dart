@@ -28,6 +28,9 @@ void main() {
   print(age/10);
   print(age%10);
   */
+
+  //types in dart
+  
   String name = "sadanand";
   print(name);
   
