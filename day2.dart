@@ -1,9 +1,9 @@
 //Namaste Bharat
 void main() {
   print("Namaste Bharat");
-//   main1();
-//   main2();
-//   main3();
+  main1();
+  main2();
+  main3();
   main4();
 }
 
@@ -31,7 +31,7 @@ void main2() {
   int b = 20;
 
   bool isMarried = true;
-  dynamic phone = "91-7204842431";
+  dynamic phone = "91-7205657431";
   print("The sum of $a and $b is ${a + b}");
   print(isMarried.runtimeType);
   print(age == 20);
@@ -41,10 +41,10 @@ void main2() {
 
 //final and const
 void main3() {
-  // const pi = 3.14;
-  final pi = 3.14;
-  //   pi=3.142;
-  print(pi);
+  const constpi = 3.14;
+  print(constpi);
+  final finalpi = 3.14;
+  print(finalpi);
   //using both final and const in single line
   final List<int> numbers = const [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
   print(numbers);
