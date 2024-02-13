@@ -77,3 +77,185 @@ void main4(){
   print("Logical AND to ${x > y && y < x}");
   print("Logical OR to ${x > y || y < x}");
 }
+
+
+
+// day3
+void main() {
+  main5();
+  main6();
+  main7();
+  main8();
+}
+
+void main5(){
+//    Conditions to check weather
+//   temperature < 10 -> very cold
+//   temperature Between 10 and 18 -> cold
+//   temperature Between 10 and 24 -> normal
+//   temperature Between 10 and 35 -> hot
+//   temperature > 40 -> very hot
+//   temperature > 45 -> really too hot
+
+  const temperature = 43;
+
+//   if-else block Structure
+  
+    if (temperature < 10){
+      print("Very Cold");
+    }else{
+      print("not very cold");
+  
+
+//   if-else-if block Structure
+      
+    if (temperature < 10) {
+      print("Very Cold");
+    } else if (temperature >= 10 && temperature <= 18) {
+      print("Cold");
+    } else if (temperature >= 10 && temperature <= 24) {
+      print("Normal");
+    } else if (temperature >= 10 && temperature <= 35) {
+      print("Hot");
+    } else if (temperature >= 10 && temperature <= 40) {
+      print("Very Hot");
+    } else {
+      print("Really to Hot");
+    }
+
+//   Switch Statement
+      
+    switch (temperature) {
+      case < 10:
+        print("Very Cold");
+        break;
+      case > 10 && <= 18:
+        print("Cold");
+        break;
+      case > 10 && <= 24:
+        print("Normal");
+        break;
+      case > 10 && <= 34:
+        print("Hot");
+        break;
+      case > 10 && <= 40:
+        print("Very Cold");
+        break;
+      default:
+        print("Really Too Hot");
+        break;
+    }
+
+//   switch Expression in (Dart 3)
+
+  final status = switch(temperature){
+      <10 => "very cold",
+      >= 10 && <= 18 => "Cold",
+      >= 10 && <= 24 =>"Normal",
+      >= 10 && <= 34 =>"Hot",
+      >= 10 && <= 40 =>"Very Cold",
+      _=> "Really Too Hot",
+  };
+  print(status);
+}
+}
+
+//Data Structures (list,map,set)
+
+//List
+void main6() {
+  String name = "Flutter";
+
+  List<int> marks = [34, 78, 87, 97, 105];
+
+  //add
+  marks.add(107);
+  //removed
+  marks.remove(105);
+  //insert
+  marks.insert(0, 30);
+  //other methods
+  //chech docs
+  print(marks);
+  print("length is ${marks.length}");
+  print("First Index is ${marks[0]}");
+  print("last Index is ${marks[4]}");
+  //join method
+  final join = marks.join(" ");
+  print("join method $join");
+  //split method
+  final split = name.split(" ");
+  print("Split method $split");
+}
+
+//map
+void main7() {
+  List<int> marks = [34, 78, 87, 97, 105];
+
+  Map<String, dynamic> person = {
+    'name': 'sadanand',
+    'age': 23,
+    'city': "kalaburagi",
+  };
+
+  print(person['name']);
+  print(person['age']);
+  print(person['city']);
+
+  //adding in list
+  person['phone'] = "91-7204832431";
+  //print all map values in single line
+  print(person.values);
+}
+
+//set
+void main8() {
+  List<int> marks = [1,34, 78, 78, 87, 97, 105, 105];
+
+  Map<String, Object> person = {
+    'name': 'sadanand',
+    'age': 23,
+    'city': "kalaburagi",
+  };
+
+  //we cannot add duplicate value in set
+  Set<int> numbers = {0,10, 20, 30, 40, 50};
+  print(numbers);
+
+  //removed duplicate values from marks
+  final unqiueSet = Set.of(marks);
+  print(unqiueSet);
+
+  //duplicate values not Removed from marks
+  final notUnqiueList = List.from(marks);
+  print(notUnqiueList);
+
+  //printing marks list using for loop
+  print("printing marks list using for loop");
+  for (int i = 0; i < marks.length; i++) {
+    print(marks[i]);
+  }
+  
+  print("printing marks list to get every items ");
+  for (int mark in marks){
+    print(mark);
+  }
+  
+  
+  //while loop
+  
+  int index = 1;
+  while(index < marks.length){
+    print(marks[index]);
+    index++;
+  }
+  
+  
+//   do while loop
+  
+  do{
+    print(marks[index]);
+    index++;
+  }while(index < marks.length);
+}
+
