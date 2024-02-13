@@ -80,7 +80,7 @@ void main4(){
 
 
 
-// day3
+// day2
 void main() {
   main5();
   main6();
@@ -259,3 +259,62 @@ void main8() {
   }while(index < marks.length);
 }
 
+//day3
+void main() {
+  main9();
+  add(2,4);
+  addsingleLineFunction(3,6);
+  print(addsingleLineFunctionMethod(2,6));
+  print(addPostional(2));
+  print(calculateArea(height:200.0,width:150.0));
+  print(calculateAreaRequired(width:150.0,height:200.0));
+  
+}
+
+//Null safety in dart
+void main9() {
+  // Non-nullable variable (it will give error)
+      int x;
+      print(x);
+
+  //nullable variable
+    int? y;
+    print(y);
+
+    int? z = 10;
+  //using if else statement
+    if(z == null){
+      print("null");
+    }else {
+      print(z.isEven);
+    }
+
+  //if else replacement or null safety operator
+  print(z?.isEven);
+
+  //null assertion operator dart
+  print(z!.isEven);
+}
+
+//Functions in dart
+// --------------------------------------------------------------------
+//positional arguments
+void add(int x, int y) {
+  print(x + y);
+}
+
+//one line function
+void addsingleLineFunction(int x, int y) => print(x + y);
+
+//one more method
+addsingleLineFunctionMethod(int x, int y) => x + y;
+
+//make functionality parameter optional
+//postionaly optional
+addPostional(int x, [int y = 0]) => x + y;
+
+//Named Optional
+calculateArea({double width = 0.0, double height = 0.0}) => width * height;
+
+//Named Required
+calculateAreaRequired({required double width , required double height}) => width * height;
