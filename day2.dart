@@ -344,3 +344,31 @@ class ElectricCar extends Car{
   
   ElectricCar(String name, this.chargeCapacity): super(name);
 }
+
+
+//method overiding
+void main() {
+  final ec =ElectricCar('TATA',2900);
+  print(ec.name);
+  ec.drive();
+}
+
+
+class Car {
+  String name;
+  
+  Car(this.name);
+  
+  void drive() => print("Driving a Car");
+  
+}
+
+class ElectricCar extends Car{
+  
+  double chargeCapacity;
+  
+  ElectricCar(String name, this.chargeCapacity): super(name);
+  
+  @override
+  void  drive()=> print(' driving an electric car');
+}
