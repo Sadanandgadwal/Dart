@@ -318,3 +318,29 @@ calculateArea({double width = 0.0, double height = 0.0}) => width * height;
 
 //Named Required
 calculateAreaRequired({required double width , required double height}) => width * height;
+
+
+
+//day4
+//inheritance
+void main() {
+  final ec =ElectricCar('TATA',2900);
+  ec.drive();
+}
+
+
+class Car {
+  String name;
+  
+  Car(this.name);
+  
+  void drive() => print("Driving a Car");
+  
+}
+
+class ElectricCar extends Car{
+  
+  double chargeCapacity;
+  
+  ElectricCar(String name, this.chargeCapacity): super(name);
+}
