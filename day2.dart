@@ -52,28 +52,31 @@ void main3() {
 
 //common opertor
 void main4(){
-  int x = 25;
+  int x = 23;
   int y = 27;
   
   final add = x + y;
   final sub = x - y;
   final mut = x * y;  
   final div = x / y;  
-  final divwithinterger = y ~/ x;  
-  final modules = x % y;
+  final divwithintegers = y ~/ x;  
+  final modulo = x % y;
   final greater = x > y;
-  final notgreater = x < y;
-  print(add);
-  print(sub);
-  print(mut);  
-  print(div);
-  print(divwithinterger);
-  print(modules);
-  print(greater);
-  print(notgreater);
-  
-  print("equal to ${x == y}");
-  print("not equal to ${x != y}");
+  final notGreater = x < y;
+  final greaterthan = x >= y;
+  final notgreaterthan = x <= y;
+  print("Addition of two numbers, $add");
+  print("subtraction of two numbers, $sub");
+  print("multiplication of two numbers, $mut");
+  print("division of two numbers, $div");
+  print("Divide, returning an integer result, $divwithintegers");  //Truncating division is division where a fractional result is converted to an integer by rounding towards zero
+  print("remainder of an integer division, $modulo");
+  print("Greater than, $greater");
+  print("Less than, $notGreater");
+  print("Greater than or equal to, $greaterthan");
+  print("Less than, $notgreaterthan");
+  print("Equal to ${x == y}");
+  print("Not equal to ${x != y}");
   print("Logical AND to ${x > y && y < x}");
   print("Logical OR to ${x > y || y < x}");
 }
