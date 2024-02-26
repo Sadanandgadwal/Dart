@@ -163,7 +163,35 @@ void main5(){
 }
 }
 
-//Data Structures (list,map,set)
+
+  
+  
+  //while loop
+  
+  int index = 1;
+  while(index < marks.length){
+    print(marks[index]);
+    index++;
+  }
+  
+  
+//   do while loop
+  
+  do{
+    print(marks[index]);
+    index++;
+  }while(index < marks.length);
+}
+
+
+// for 
+for (int i = 0; i < marks.length; i++) {
+    print(marks[i]);
+}
+
+// -------------------------      
+blog 3
+//Data Structures (list, map, set)
 
 //List
 void main6() {
@@ -178,7 +206,7 @@ void main6() {
   //insert
   marks.insert(0, 30);
   //other methods
-  //chech docs
+  //check docs
   print(marks);
   print("length is ${marks.length}");
   print("First Index is ${marks[0]}");
@@ -190,6 +218,10 @@ void main6() {
   final split = name.split(" ");
   print("Split method $split");
 }
+
+
+
+
 
 //map
 void main7() {
@@ -221,7 +253,7 @@ void main8() {
     'city': "kalaburagi",
   };
 
-  //we cannot add duplicate value in set
+  //we cannot add duplicate values in the set
   Set<int> numbers = {0,10, 20, 30, 40, 50};
   print(numbers);
 
@@ -243,25 +275,6 @@ void main8() {
   for (int mark in marks){
     print(mark);
   }
-  
-  
-  //while loop
-  
-  int index = 1;
-  while(index < marks.length){
-    print(marks[index]);
-    index++;
-  }
-  
-  
-//   do while loop
-  
-  do{
-    print(marks[index]);
-    index++;
-  }while(index < marks.length);
-}
-
 //day3
 void main() {
   main9();
@@ -276,7 +289,7 @@ void main() {
 
 //Null safety in dart
 void main9() {
-  // Non-nullable variable (it will give error)
+  // Non-nullable variable (it will give an error)
       int x;
       print(x);
 
@@ -306,14 +319,14 @@ void add(int x, int y) {
   print(x + y);
 }
 
-//one line function
+//one-line function
 void addsingleLineFunction(int x, int y) => print(x + y);
 
 //one more method
 addsingleLineFunctionMethod(int x, int y) => x + y;
 
 //make functionality parameter optional
-//postionaly optional
+//positionally optional
 addPostional(int x, [int y = 0]) => x + y;
 
 //Named Optional
@@ -349,7 +362,7 @@ class ElectricCar extends Car{
 }
 
 
-//method overiding
+//method overriding
 void main() {
   final ec =ElectricCar('TATA',2900);
   print(ec.name);
