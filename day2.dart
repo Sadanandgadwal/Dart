@@ -388,3 +388,46 @@ class ElectricCar extends Car{
   @override
   void  drive()=> print(' driving an electric car');
 }
+
+
+
+//abstract class
+void main() {
+  final ec =ElectricCar('TATA',2900);
+  final fc =FuelCar("BMW",7879);
+//   print(ec.name);
+  ec.drive();
+  fc.drive();
+}
+
+
+abstract class Car {
+  String name;
+  
+  Car(this.name);
+  
+  void drive();
+  
+}
+
+class ElectricCar extends Car{
+  
+  double chargeCapacity;
+  
+  ElectricCar(String name, this.chargeCapacity): super(name);
+  
+  @override
+  void  drive(){
+    print("Driving an Electric Car");
+  }
+}
+
+class FuelCar extends Car{
+  double fuelCapacity;
+  
+  FuelCar(String name,this.fuelCapacity):super(name);
+  @override
+  void drive(){
+    print("driving an fuel car");
+  }
+}
