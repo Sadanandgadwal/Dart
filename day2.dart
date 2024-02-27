@@ -431,3 +431,54 @@ class FuelCar extends Car{
     print("driving an fuel car");
   }
 }
+
+
+//runtime polymorphism
+void main() {
+  final ec = ElectricCar('TATA', 2900);
+  final fc = FuelCar("BMW", 7879);
+  final gc = GasCar("Maruti", 7879);
+  final List<Car> carList = [ec, fc, gc];
+
+  for (final Car car in carList) {
+    checkDrive(car);
+  }
+}
+
+void checkDrive(Car car) {
+  car.drive();
+}
+
+abstract class Car {
+  String name;
+  Car(this.name);
+  void drive();
+}
+
+class ElectricCar extends Car {
+  double chargeCapacity;
+  ElectricCar(String name, this.chargeCapacity) : super(name);
+  @override
+  void drive() {
+    print("Driving an Electric Car");
+  }
+}
+
+class FuelCar extends Car {
+  double fuelCapacity;
+  FuelCar(String name, this.fuelCapacity) : super(name);
+  @override
+  void drive() {
+    print("Driving an fuel car");
+  }
+}
+
+class GasCar extends Car {
+  double gasCapacity;
+  GasCar(String name, this.gasCapacity) : super(name);
+  @override
+  void drive() {
+    print("Driving an Gas car");
+  }
+}
+
