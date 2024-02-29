@@ -482,3 +482,29 @@ class GasCar extends Car {
   }
 }
 
+// without Async Await
+void main() {
+  print('open Connection');
+  Future.delayed(const Duration(seconds: 5), () {
+    print('Download Completed');
+  });
+  print('close Connection');
+}
+
+Future<String> downloadPDF(){
+  return Future.delayed(const Duration(seconds: 5), () => 'Dart_Basics.pdf');
+}
+
+  
+// with Async Await
+void main() async {
+  print('Downloading PDF');
+  final pdf = await downloadPDF();
+  print(pdf);
+}
+
+Future<String> downloadPDF() {
+  return Future.delayed(const Duration(seconds: 5), () => 'Dart_Basics.pdf');
+}
+
+  
